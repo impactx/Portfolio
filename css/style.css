@@ -1,9 +1,12 @@
+
 html {
   background-color: ghostwhite;
   font-family: 'Crimson Text', serif;
 
-  background-image: url("../img/background.jpg");
-
+  background-image: url("https://www.fg-a.com/wallpapers/white-marble-2-2018.jpg");
+  background-color: ghostwhite;
+  background-size: cover;
+  background-repeat: no-repeat;
 
 }
 header {
@@ -17,7 +20,10 @@ body {
 }
 footer a {
   color: ghostwhite;
+
 }
+
+
 
 ul {
   padding-left: 0px;
@@ -78,7 +84,6 @@ header h1{
 .profile-div {
   background: url(../img/code.png) center / cover no-repeat;
 
-  width: 100%;
   height: 700px;
   background-color: #cccccc;
 
@@ -91,6 +96,8 @@ header h1{
   margin-left: auto;
   margin-right: auto;
   border-radius: 50%;
+
+
 
 }
 .info-li {
@@ -116,6 +123,8 @@ header h1{
 .div-h2 {
   padding-top: 35px;
   font-size: 35px;
+
+
 }
 
 .info-ul {
@@ -123,21 +132,27 @@ header h1{
 
   text-align: center;
 }
-
-header {
-
+.outline-main {
+  display: inline-block;
+  height: auto;
+  width: 100%;
 }
 /* Footer below */
 footer {
   width: 100%;
   overflow: hidden;
   padding: 70px 0px;
-  background-color: #18181a;
+  background: linear-gradient(ghostwhite 0%, #18181a 3%);
+
   color: ghostwhite;
 }
 
+
 footer h2 {
   text-align: center;
+  mix-blend-mode: difference;
+  color: ghostwhite;
+
 }
 .ul-footer {
   float: right;
@@ -208,10 +223,11 @@ footer h2 {
 
 #icon-list {
   list-style-type: none;
-  display:inline;
+  display:inline-block;
   padding-left: 0px;
-  margin: 20px 0px 0px -30px;;
-  height: auto;
+  margin: 20px 0px 0px -30px;
+
+
 
 }
 #icon-list li {
@@ -227,10 +243,10 @@ footer h2 {
 .project-outter {
   width: 80%;
   margin: auto;
-  border-bottom: 1px black solid;
   margin-bottom: 50px;
   padding-bottom: 50px;
 }
+
 .project-text {
   display: inline-block;
 }
@@ -266,6 +282,12 @@ footer h2 {
 
 #first-project {
   margin-top: 50px;
+  border-bottom: 1px black solid;
+
+}
+
+#second-project {
+  margin-bottom: 50px;
 }
 
 .mainpage-project {
@@ -280,7 +302,9 @@ footer h2 {
 /* Contact page */
 .contact-body {
   width: 100%;
-  display: block;
+  display: inline-block;
+  float: none;
+  margin: auto;
 }
 .body-left {
   width: 80%;
@@ -291,11 +315,36 @@ footer h2 {
   margin: auto;
 }
 
+.form {
+  margin: auto;
+  width: 50%
+
+}
+.form-div input {
+  width:auto;
+}
+.form-div label {
+  position: relative;
+  text-align:right;
+}
+.form-div:first-child  {
+  margin-top: 50px;
+}
+.form-div:last-child {
+  margin-bottom: 50px;
+}
 
 
+/* Desktop / PC */
 @media screen and (min-width:375px) {
-  .contact-body {
 
+  #first-project .project-image {
+    width: 400px;
+  }
+
+
+
+  .contact-body {
     width: 80%;
     margin: 50px auto 0px auto;;
   }
@@ -303,7 +352,6 @@ footer h2 {
     float: left;
     width: 40%;
     text-align: center;
-
   }
   .body-left h2 {
     font-size: 30px;
@@ -321,11 +369,19 @@ footer h2 {
   }
 
   .mainpage-project {
-    width: 50%;
+    width: 49%;
     float: right;
     display: inline;
     margin-top: 50px;
+    border-style: none;
   }
+  .mainpage-project:first-child {
+    border-left: 1px solid black;
+  }
+  .mainpage-project:last-child {
+    padding-right:25px;
+  }
+
 
   .info-li {
     margin: 16px 14px;
@@ -339,7 +395,6 @@ footer h2 {
     float: left;
     border-bottom: 1px black solid;
     height: 50px;
-
   }
 
 
@@ -352,10 +407,7 @@ footer h2 {
     display: flex;
     justify-content: center;
     margin: 0 auto;
-
-
   }
-
 
   .ul-footer ul {
     display: inline-block
@@ -368,10 +420,13 @@ footer h2 {
     font-weight: bold;
   }
   .profile-div{
-    width: 100%;
+    width: 95%;
     margin: auto;
     padding: 0;
     overflow: hidden;
+  }
+  .outline-main {
+    width: 95%;
   }
   .project-image {
     float: right;
@@ -385,6 +440,7 @@ footer h2 {
   }
 
 }
+/* mobile */
 @media screen and (max-width:375px) {
   .info-ul {
     margin-right: auto;
@@ -452,7 +508,7 @@ footer h2 {
 }
 
 
-
+/* Tablet */
 @media screen and (min-width:340px) and (max-width:1382px){
   .body-right {
     float: right;
